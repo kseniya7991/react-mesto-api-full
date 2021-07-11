@@ -1,0 +1,32 @@
+.photo__img {
+  height: 282px;
+  min-width: 100%;
+  object-fit: cover;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.photo__img:before {
+  content: 'Йой, кажется, ваша фотография не смогла загрузиться :(';
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 50%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.photo__img:after {
+  content: '';
+  display: block;
+  padding-bottom: 25%;
+}
+
+
+

@@ -1,0 +1,20 @@
+.photo__like {
+  background-image: url('../../../images/like.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: contain;
+  min-width: 23px;
+  outline-style: none;
+  cursor: pointer;
+  align-self: center;
+  transition: .2s;
+  border: 0;
+  padding: 9.5px 0;
+  margin-bottom: 2px;
+}
+
+.photo__like:hover {
+  opacity: 0.5;
+  transition: .2s;
+}

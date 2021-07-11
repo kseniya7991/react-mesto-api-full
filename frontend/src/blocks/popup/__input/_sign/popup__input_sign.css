@@ -1,0 +1,15 @@
+.popup__input_sign {
+    background: transparent;
+    border-bottom: 1px solid white;
+    height: 43px;
+    padding-bottom: 0;
+    margin-bottom: 25px;
+    color: #fff;
+}
+
+.popup__input_sign:last-child {
+    margin-bottom: 0;
+}
+
+input::-webkit-input-placeholder { color: #CCCCCC; }
+input::-moz-placeholder { color: #CCCCCC; }

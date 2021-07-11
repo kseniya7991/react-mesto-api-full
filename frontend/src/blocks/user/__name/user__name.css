@@ -1,0 +1,42 @@
+.user__name {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 16px;
+  position: relative;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 321px) and (max-width: 881px) {
+    .user__name {
+      font-size: 35px;
+      line-height: 40px;
+    }
+}
+
+@media screen and (max-width: 569px) {
+  .user__name {
+    padding-right: 0;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+    .user__name {
+      font-size: 27px;
+      line-height: 33px;
+      max-width: 200px;
+    }
+  }
+
+
+

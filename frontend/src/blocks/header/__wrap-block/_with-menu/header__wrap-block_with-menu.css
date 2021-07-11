@@ -1,0 +1,9 @@
+@media screen and (max-width: 560px) {
+    .header__wrap-block_with-menu {
+      flex-direction: column;
+      align-self: center;
+      align-items: center;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+  }

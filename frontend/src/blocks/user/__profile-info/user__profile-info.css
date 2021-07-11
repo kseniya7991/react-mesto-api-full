@@ -1,0 +1,11 @@
+.user__profile-info {
+  position: relative;
+  max-width: calc(100% - 150px);
+}
+
+@media screen and (max-width: 569px) {
+    .user__profile-info  {
+      max-width: 100%;
+      margin-bottom: 36px;
+    }
+}

@@ -1,0 +1,39 @@
+.popup__form {
+  position: relative;
+  max-width: 430px;
+  min-width: 430px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 34px;
+  padding-bottom: 37px;
+  box-sizing: border-box;
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .popup__form {
+      max-width: 282px;
+      min-width: 282px;
+    }
+}
+
+@media screen and (max-width: 540px) and (min-width: 321px) {
+    .popup__form {
+      max-width: 310px;
+      min-width: 310px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+ .popup__form { 
+    padding-left: 22px;
+    padding-right: 22px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}

@@ -1,0 +1,6 @@
+.popup__save-button_saving::after {
+  content: " ...";
+  font-size: 15px;
+  /*transition:  2s infinite ease-in-out;*/
+   /*transform: scale(2);*/
+}

@@ -1,0 +1,60 @@
+.user-photo {
+  width: 120px;
+  overflow: hidden;
+  margin-right: 30px;
+  position: relative;
+  display: block;
+  height: 120px;
+  
+}
+
+
+@media screen and (max-width: 580px) {
+  .user-photo {
+    margin-right: 0;
+  }
+}
+
+.user-photo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.5);
+  opacity: 0;
+  transition: .3s;
+}
+
+
+.user-photo::before {
+  content: '';
+  background: url('../../images/__edit-photo.svg');
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 26px;
+  height:26px;
+  background-repeat: no-repeat;
+  z-index:1;
+  opacity:0;
+  transition: .3s;
+}
+
+.user-photo:hover::after {
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.user-photo:hover::before {
+  opacity: 1;
+  transition: all .5s ease;
+}
+
+.user-photo:hover {
+  cursor: pointer;
+}

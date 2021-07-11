@@ -1,0 +1,8 @@
+@media screen and (max-width: 560px) {
+    .header__logo-link_with-menu {
+        width: -webkit-fill-available;
+        padding: 30px;
+        border-top: 1px solid rgba(84, 84, 84, .7);
+    }
+}
+

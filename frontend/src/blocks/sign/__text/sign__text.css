@@ -1,0 +1,23 @@
+.sign__text {
+  font-family: 'Inter', arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  margin-top: 15px;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  color: #ffffff;
+}
+
+
+@media screen and (max-width: 540px) {
+    .sign__text  {
+        margin-top: 15px;
+    }
+}
+
+

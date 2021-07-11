@@ -1,0 +1,13 @@
+.popup__form_sign {
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+}
+
+@media screen and (max-width: 540px) and (min-width: 321px) {
+    .popup__form_sign {
+      max-width: 100%;
+    }
+}

@@ -1,0 +1,11 @@
+.popup-close_header {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    display: none;
+}
+
+@media screen and (max-width: 560px) {
+    .popup-close_header {
+        display: block;
+    }
+}

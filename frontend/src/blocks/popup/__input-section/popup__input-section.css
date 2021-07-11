@@ -1,0 +1,19 @@
+.popup__input-section {
+  position: relative;
+  margin-bottom: 34px;
+  display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    max-height: max-content;
+    flex-direction: column;
+}
+
+.popup__input-section:last-of-type {
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 540px) {
+  .popup__input-section:last-of-type {
+    margin-bottom: 45px;
+  }
+}

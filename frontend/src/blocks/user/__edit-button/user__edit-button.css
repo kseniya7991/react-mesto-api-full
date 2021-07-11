@@ -1,0 +1,40 @@
+.user__edit-button{
+  min-width: 24px;
+  border: 0;
+  outline-style: none;
+  vertical-align: center;
+  background-image: url('../../../images/__edit-button2.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  background-color: #000;
+  margin-left: 18px;
+  margin-bottom: 16px;
+  transform-origin: 100% 50%;
+  cursor: pointer;
+  box-sizing: border-box;
+  transition: .2s;
+
+  /*убрано абсолютное позиционирование*/
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  padding: 12px 0;
+}
+
+.user__edit-button:hover {
+  opacity: 0.6;
+  transition: .2s;
+}
+
+@media screen and (max-width: 320px) {
+  .user__edit-button{
+    max-width: 18px;
+    padding: 9px 0;
+    min-width: 18px;
+    background-size: contain;
+    top: 20%;
+    margin-bottom: 14px;
+    margin-left: 0;
+  }
+}

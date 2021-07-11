@@ -1,0 +1,32 @@
+.popup-close {
+  position: absolute;
+  transform-origin: 0% 100%;
+  background-image: url('../../images/__close-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  min-width: 40px;
+  transform: translate(100%, -100%);
+  right: 0;
+  top: 0;
+  background-color: transparent;
+  border: 0;
+  outline-style: none;
+  transition: .2s;
+  cursor: pointer;
+  padding: 20px 0;
+}
+
+.popup-close:hover {
+  opacity: 0.6;
+  
+}
+
+@media screen and (max-width: 540px) {
+    .popup-close{
+      max-width: 26px;
+      max-height: 26px;
+      overflow: hidden;
+      background-size: contain;
+      transform: translate(0%, -100%);
+    }
+}

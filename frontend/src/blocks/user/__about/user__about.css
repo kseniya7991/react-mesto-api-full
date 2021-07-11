@@ -1,0 +1,15 @@
+.user__about {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  margin: 0;
+}
+
+@media screen and (max-width: 569px) {
+  .user__about {
+    text-align: center;
+  }
+}

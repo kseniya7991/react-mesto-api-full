@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 
 function SignForm({ name, title, buttonValue, onSubmit, onChangeEmail, onChangePassword, email, password}) {

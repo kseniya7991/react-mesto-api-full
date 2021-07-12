@@ -37,8 +37,6 @@ const allowedCors = [
   'http://kst.mesto.nomoredomains.club',
 ];
 
-app.use(limiter);
-
 app.use((req, res, next) => {
   const { origin } = req.headers;
   if (allowedCors.includes(origin)) {
@@ -68,6 +66,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser('secret'));
 
 app.use(requestLogger); // подключаем логгер запросов
+
+app.use(limiter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {

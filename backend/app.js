@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const rateLimit = require('express-rate-limit');
 const express = require('express');
+const helmet = require('helmet');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const { celebrate, Joi } = require('celebrate');
@@ -18,6 +19,7 @@ const { createUser, login } = require('./controllers/user');
 const handleErrors = require('./handle-errors');
 
 const app = express();
+app.use(helmet());
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes

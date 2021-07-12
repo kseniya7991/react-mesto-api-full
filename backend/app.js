@@ -19,7 +19,7 @@ const handleErrors = require('./handle-errors');
 
 const app = express();
 
-app.set('trust proxy', 1);
+app.set('trust proxy', true);
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes

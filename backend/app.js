@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-/* const rateLimit = require('express-rate-limit'); */
+const rateLimit = require('express-rate-limit');
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
@@ -19,11 +19,11 @@ const handleErrors = require('./handle-errors');
 
 const app = express();
 
-/* const limiter = rateLimit({
+const limiter = rateLimit({
   windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // limit each IP to 100 requests per windowMs
+  max: 800, // limit each IP to 100 requests per windowMs
 });
- */
+
 const methodValidation = (value) => {
   const correctLink = validator.isURL(value, { require_protocol: true });
   if (!correctLink) {
@@ -37,7 +37,7 @@ const allowedCors = [
   'http://kst.mesto.nomoredomains.club',
 ];
 
-/* app.use(limiter); */
+app.use(limiter);
 
 app.use((req, res, next) => {
   const { origin } = req.headers;

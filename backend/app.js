@@ -19,12 +19,14 @@ const handleErrors = require('./handle-errors');
 
 const app = express();
 
-app.set('trust proxy', true);
-
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
+  windowMs: 15 * 60 * 10000, // 15 minutes
   max: 800, // limit each IP to 100 requests per windowMs
 });
+
+app.set('trust proxy', true);
+
+app.use(limiter);
 
 const methodValidation = (value) => {
   const correctLink = validator.isURL(value, { require_protocol: true });
@@ -68,8 +70,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser('secret'));
 
 app.use(requestLogger); // подключаем логгер запросов
-
-app.use(limiter);
 
 app.get('/crash-test', () => {
   setTimeout(() => {

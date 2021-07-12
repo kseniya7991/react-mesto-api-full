@@ -41,6 +41,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.13.2",
     "validator": "^13.6.0",
-    "winston": "^3.3.3"
+    "winston": "^3.3.3",
+    "helmet": "^4.6.0"
   }
 }

@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
-const { celebrate, Joi, isCelebrateError } = require('celebrate');
+const { celebrate, Joi } = require('celebrate');
 const validator = require('validator');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
@@ -14,7 +14,7 @@ const auth = require('./middlewares/auth');
 const userRoutes = require('./routes/user');
 const cardRoutes = require('./routes/card');
 const { createUser, login } = require('./controllers/user');
-/* const handleErrors = require('./handle-errors'); */
+const handleErrors = require('./handle-errors');
 
 const app = express();
 
@@ -97,17 +97,7 @@ app.use('/*', (req, res, next) => {
 app.use(errorLogger);
 
 app.use((err, req, res, next) => {
-  const { statusCode = 500, message } = err;
-
-  if (isCelebrateError(err)) {
-    res.status(400).send({ message: 'Введены некорректные данные' });
-  }
-
-  res.status(statusCode).send({
-    message: statusCode === 500
-      ? 'На сервере произошла ошибка'
-      : message,
-  });
+  handleErrors(err, req, res, next);
 });
 
 module.exports = app;

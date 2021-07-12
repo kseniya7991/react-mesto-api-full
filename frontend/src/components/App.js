@@ -59,12 +59,12 @@ function App() {
     auth
       .register(email, password)
       .then((res) => {
-        if (!res.message) {
-          setStatusInfoPopup(true);
-          setIsInfoPopupOpen(true);
-        } else {
+        if (res.message) {
           setMessage(res.message);
           setStatusInfoPopup(false);
+          setIsInfoPopupOpen(true);
+        } else {
+          setStatusInfoPopup(true);
           setIsInfoPopupOpen(true);
         }
       })

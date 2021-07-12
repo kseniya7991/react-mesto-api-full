@@ -59,7 +59,6 @@ function App() {
     auth
       .register(email, password)
       .then((res) => {
-        console.log(res.message)
         if (res.message) {
           setMessage(res.message);
           setStatusInfoPopup(false);

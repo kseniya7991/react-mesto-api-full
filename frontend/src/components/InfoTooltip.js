@@ -6,7 +6,6 @@ function InfoTooltip({ isOpen, onClose, status, message }) {
       onClose();
     }
   }
-  console.log(status, message)
 
   return (
     <section className={`popup popup_info ${isOpen ? ' popup_opened' : ''}`} onClick={handleOverlayClick}>

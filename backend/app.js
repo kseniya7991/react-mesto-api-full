@@ -97,7 +97,7 @@ app.use('/*', (req, res, next) => {
 app.use(errorLogger);
 
 app.use((err, req, res, next) => {
-  handleErrors(err, req, res, next);
+  handleErrors(err, req, res);
 });
 
 module.exports = app;

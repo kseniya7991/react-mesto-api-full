@@ -1,6 +1,6 @@
 const { isCelebrateError } = require('celebrate');
 
-module.exports.handleErrors = (err, req, res, next) => {
+function handleErrors(err, req, res) {
   const { statusCode = 500, message } = err;
 
   if (isCelebrateError(err)) {
@@ -12,4 +12,6 @@ module.exports.handleErrors = (err, req, res, next) => {
       ? 'На сервере произошла ошибка'
       : message,
   });
-};
+}
+
+module.exports = handleErrors;

@@ -20,7 +20,7 @@ const handleErrors = require('./handle-errors');
 const app = express();
 
 const limiter = rateLimit({
-  windowMs: 15 * 60 * 10000, // 15 minutes
+  windowMs: 1 * 60 * 1000, // 15 minutes
   max: 3, // limit each IP to 100 requests per windowMs
   message: 'Too many accounts created from this IP, please try again after an hour',
 });

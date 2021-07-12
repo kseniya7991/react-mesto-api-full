@@ -67,6 +67,7 @@ app.use(cookieParser('secret'));
 
 app.use(requestLogger); // подключаем логгер запросов
 
+app.set('trust proxy', 1);
 app.use(limiter);
 
 app.get('/crash-test', () => {

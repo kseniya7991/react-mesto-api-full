@@ -62,6 +62,7 @@
 @import url('./blocks/popup/_opened/popup_opened.css');
 @import url('./blocks/popup/__input/_error/popup__input_error.css');
 @import url('./blocks/popup/__input/_sign/popup__input_sign.css');
+@import url('./blocks/popup/__input/_password/popup__input_password.css');
 @import url('./blocks/popup/__input-error/popup__input-error.css');
 @import url('./blocks/popup/__input-section/popup__input-section.css');
 @import url('./blocks/popup/__save-button/_inactive/popup__save-button_inactive.css');

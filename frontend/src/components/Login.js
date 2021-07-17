@@ -5,6 +5,7 @@ function Login({ onLogin }) {
   const name = 'Login';
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [isVisiblePassword, setIsVisiblePassword] = useState(false);
 
   //Отправка логина и пароля на сервер при нажатии кнопки "войти"
   function handleSubmit(e) {
@@ -21,6 +22,11 @@ function Login({ onLogin }) {
     setPassword(e.target.value);
   }
 
+  // Отображение пароля
+  function handleShowpassword(e) {
+    setIsVisiblePassword(!isVisiblePassword)
+  }
+
   return (
     <SignForm
       name={name}
@@ -29,8 +35,10 @@ function Login({ onLogin }) {
       onChangeEmail={handleEmailChange}
       onChangePassword={handlePasswordChenge}
       onSubmit={handleSubmit}
+      onShowPassword={handleShowpassword}
       email={email}
       password={password}
+      isVisiblePassword={isVisiblePassword}
     />
   );
 }

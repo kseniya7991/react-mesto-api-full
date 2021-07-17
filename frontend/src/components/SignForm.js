@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function SignForm({ name, title, buttonValue, onSubmit, onChangeEmail, onChangePassword, email, password}) {
+function SignForm({ name, title, buttonValue, onSubmit, onChangeEmail, onChangePassword, onShowPassword, email, password, isVisiblePassword}) {
   return (
     <section className="sign">
       <form className="popup__form popup__form_sign" name={name} onSubmit={onSubmit}>
@@ -18,16 +18,23 @@ function SignForm({ name, title, buttonValue, onSubmit, onChangeEmail, onChangeP
               onChange={onChangeEmail}
               value={email}
             />
+            <section className="popup__input_password">
             <input
               className="popup__input popup__input_sign"
               id="password"
               name="password"
-              type="password"
+              type={`${isVisiblePassword ? 'text' : 'password'}`}
               placeholder="Пароль"
               required
               onChange={onChangePassword}
               value={password}
             />
+            <button 
+              className={`password_visible ${isVisiblePassword ? 'password_unvisible_off' : ''}`}
+              onClick={onShowPassword}
+              type="button"
+            />
+            </section>
           </section>
         </div>
         <div>

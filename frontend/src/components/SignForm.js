@@ -30,7 +30,7 @@ function SignForm({ name, title, buttonValue, onSubmit, onChangeEmail, onChangeP
               value={password}
             />
             <button 
-              className={`password_visible ${isVisiblePassword ? 'password_unvisible_off' : ''}`}
+              className={`password_unvisible ${isVisiblePassword ? 'password_unvisible_off' : ''}`}
               onClick={onShowPassword}
               type="button"
             />

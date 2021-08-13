@@ -13,8 +13,6 @@ module.exports = (req, res, next) => {
 
   const token = authorization.replace('Bearer ', '');
 
-  /* const token = authorization.split('token=')[1]; */
-
   // Возвращаем ошибку Авторизации при попытке обращения к незащищенному роуту
 
   if (!token) {

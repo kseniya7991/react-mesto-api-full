@@ -47,7 +47,7 @@ function SignForm({ name, title, buttonValue, onSubmit, onChangeEmail, onChangeP
             {buttonValue}
           </button>
           <p className={`sign__text`}>
-            {`${name === 'Login' ? 'Еще не зарегистрированы?' : 'Уже зарегистрированы?'}`}
+            {`${name === 'Login' ? 'Еще не зарегистрированы? ' : 'Уже зарегистрированы? '}`}
             <Link className="sign__link" to={`${name === 'Login' ? '/sign-up' : '/sign-in'}`}>
             {`${name === 'Login' ? 'Регистрация' : 'Войти'}`}
             </Link>

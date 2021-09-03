@@ -42,6 +42,7 @@ const methodValidation = (value) => {
 const allowedCors = [
   'https://kst.mesto.nomoredomains.club',
   'http://kst.mesto.nomoredomains.club',
+
 ];
 
 app.use((req, res, next) => {

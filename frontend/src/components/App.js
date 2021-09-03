@@ -13,6 +13,7 @@ import { useHistory } from 'react-router';
 
 import MainPage from './MainPage';
 import * as auth from '../utils/auth';
+import Main from './Main';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);

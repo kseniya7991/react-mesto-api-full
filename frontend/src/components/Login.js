@@ -31,7 +31,7 @@ function Login({ onLogin }) {
     <SignForm
       name={name}
       title="Вход"
-      buttonValue="Войти"
+      buttonValue="Вход"
       onChangeEmail={handleEmailChange}
       onChangePassword={handlePasswordChenge}
       onSubmit={handleSubmit}
